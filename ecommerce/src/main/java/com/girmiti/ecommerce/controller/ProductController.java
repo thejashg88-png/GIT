@@ -36,5 +36,7 @@ public class ProductController {
     public String viewProducts(Model model) {
         model.addAttribute("products", productService.getAllProducts());
         return "products";
+        
+        
     }
 }
