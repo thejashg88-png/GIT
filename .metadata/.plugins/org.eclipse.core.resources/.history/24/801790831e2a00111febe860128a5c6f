@@ -1,0 +1,5 @@
+package com.girmiti.ecommerce.security;
+
+public class SecurityConfig {
+
+}

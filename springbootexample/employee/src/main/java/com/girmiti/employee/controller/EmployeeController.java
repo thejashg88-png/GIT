@@ -1,0 +1,50 @@
+package com.girmiti.employee.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import java.util.Optional;
+import com.girmiti.employee.entity.Employee;
+import com.girmiti.employee.service.EmployeeService;
+
+@RestController 
+@RequestMapping("/employees")
+
+public class EmployeeController {
+	
+    @Autowired
+    private EmployeeService service;
+
+    // 🔹 Create Employee
+    @PostMapping
+    public Employee createEmployee(@RequestBody Employee employee) {
+        return service.saveEmployee(employee);
+    }
+
+    // 🔹 Get All Employees
+    @GetMapping
+    public List<Employee> getAllEmployees() {
+        return service.getAllEmployees();
+    }
+
+    // 🔹 Get Employee by ID
+    @GetMapping("/{id}")
+    public Employee getEmployeeById(@PathVariable Long id) {
+        return service.getEmployeeById(id).orElse(null);
+    }
+
+    // 🔹 Delete Employee
+    @DeleteMapping("/{id}")
+    public String deleteEmployee(@PathVariable Long id) {
+        service.deleteEmployee(id);
+        return "Employee deleted successfully";
+    }
+
+    // 🔹 Get Employees by Department
+    @GetMapping("/department/{dept}")
+    public List<Employee> getByDepartment(@PathVariable String dept) {
+        return service.getEmployeeByDepartment(dept);
+
+
+}
+}

@@ -1,0 +1,40 @@
+package com.girmiti.studentapi.controller;
+
+import com.girmiti.studentapi.model.Student;
+import com.girmiti.studentapi.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping("/students")
+public class StudentController {
+
+    @Autowired
+    private StudentService service;
+
+    // GET /students
+    @GetMapping
+    public List<Student> getAllStudents() {
+        return service.getAllStudents();
+    }
+
+    // GET /students/{id}
+    @GetMapping("/{id}")
+    public Student getStudent(@PathVariable int id) {
+        return service.getStudentById(id);
+    }
+
+    // POST /students
+    @PostMapping
+    public Student createStudent(@RequestBody Student student) {
+        return service.addStudent(student);
+    }
+
+    // DELETE /students/{id}
+    @DeleteMapping("/{id}")
+    public String deleteStudent(@PathVariable int id) {
+        return service.deleteStudent(id);
+    }
+}

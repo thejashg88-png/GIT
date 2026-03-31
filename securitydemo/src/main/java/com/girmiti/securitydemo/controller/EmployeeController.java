@@ -1,0 +1,18 @@
+package com.girmiti.securitydemo.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+public class EmployeeController {
+
+    @GetMapping("/public")
+    public String publicApi() {
+        return "Public API - No login needed";
+        
+    }
+
+    @GetMapping("/employees")
+    public String securedApi() {
+        return "Secured API - Login required";
+    }
+}

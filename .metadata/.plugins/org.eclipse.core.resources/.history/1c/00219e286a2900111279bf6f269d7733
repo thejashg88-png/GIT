@@ -1,0 +1,5 @@
+package com.girmiti.securitydemo.config;
+
+public class SecurityConfig {
+
+}

@@ -1,0 +1,24 @@
+package com.girmiti.studentapi.model;
+
+public class Student {
+
+    private int Customer_id;
+    private String Product_name;
+   
+
+    public Student() {}
+
+    public Student(int id, String name, String course) {
+        this.Customer_id = id;
+        this.Product_name = name;
+
+    }
+
+    public int getId() { return Customer_id; }
+    public void setId(int id) { this.Customer_id = id; }
+
+    public String getName() { return Product_name; }
+    public void setName(String name) { this.Product_name = name; }
+
+ 
+}

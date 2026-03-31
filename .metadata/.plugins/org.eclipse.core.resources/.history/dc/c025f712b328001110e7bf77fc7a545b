@@ -1,0 +1,5 @@
+package com.girmiti.studentjpa.controller;
+
+public class StudentController {
+
+}

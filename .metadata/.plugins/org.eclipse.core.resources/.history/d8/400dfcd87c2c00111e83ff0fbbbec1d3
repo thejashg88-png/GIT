@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <p>This is products page</p>
+	<h2>Products</h2>
+
+	<div th:each="product : ${products}">
+	    <p th:text="${product.name}"></p>
+	    <p th:text="${product.price}"></p>
+
+	    <a th:href="@{/cart/add/{id}(id=${product.id})}">
+	        <button>Add to Cart</button>
+	    </a>
+	</div>
+
+	<br>
+	<a href="/cart">Go to Cart</a>
+</body>
+</html>

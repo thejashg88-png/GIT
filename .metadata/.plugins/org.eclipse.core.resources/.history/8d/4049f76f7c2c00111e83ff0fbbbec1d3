@@ -1,0 +1,22 @@
+package com.girmiti.ecommerce.controller;
+
+import org.springframework.ui.Model;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.girmiti.ecommerce.service.ProductService;
+
+
+@Controller
+public class ProductController {
+
+    @Autowired
+    private ProductService productService;
+
+    @GetMapping("/products")
+    public String viewProducts(Model model) {
+        model.addAttribute("products", productService.getAllProducts());
+        return "products";
+    }
+}

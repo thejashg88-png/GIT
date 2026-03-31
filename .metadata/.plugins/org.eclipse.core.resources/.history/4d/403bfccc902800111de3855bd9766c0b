@@ -1,0 +1,5 @@
+package com.girmiti.studentapi.service;
+
+public class StudentService {
+
+}

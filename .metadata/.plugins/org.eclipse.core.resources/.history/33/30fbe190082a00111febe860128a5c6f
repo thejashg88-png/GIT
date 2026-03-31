@@ -1,0 +1,11 @@
+package com.girmiti.ecommerce.repository;
+
+import com.girmiti.ecommerce.entity.Cart;
+
+public class CartRepository {
+
+	public interface CartRepository extends JpaRepository<Cart, Long> {
+		
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.girmiti.employee.service;
+
+public class EmployeeService {
+
+}

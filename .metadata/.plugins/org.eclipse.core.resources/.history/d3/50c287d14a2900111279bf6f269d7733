@@ -1,0 +1,36 @@
+package com.girmiti.employee.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.girmiti.employee.entity.Employee;
+import com.girmiti.employee.repository.EmployeeRepository;
+
+@Service
+public class EmployeeService {
+   
+	 @Autowired
+	    private EmployeeRepository repo;
+
+	    // Save student
+	    public  Employee saveEmployee(Employee employee) {
+	        return repo.save(employee);
+	    }
+
+	    // Get all students
+	    public List<Employee> getAllStudents() {
+	        return repo.findAll();
+	    }
+
+	    // Get by ID
+	    public Optional<Employee> getStudentById(Integer id) {
+	        return repo.findById(id);
+	    }
+
+	    // Delete student
+	    public void deleteStudent(Integer id) {
+	        repo.deleteById(id);
+	    }
+}

@@ -1,0 +1,5 @@
+package com.girmiti.employee.repository;
+
+public class EmployeeRepository {
+
+}
