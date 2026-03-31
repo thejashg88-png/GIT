@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Your Cart</h1>
+
+	<div th:each="item : ${cartItems}">
+	    <p th:text="${item.product.name}"></p>
+	    <p th:text="${item.quantity}"></p>
+	</div>
+
+	<br>
+
+	<a href="/orders/place">
+	    <button>Place Order</button>
+	</a>
+</body>
+</html>

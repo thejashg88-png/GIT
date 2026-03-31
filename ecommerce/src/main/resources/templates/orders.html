@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Orders</title>
+</head>
+<body>
+    <h1>Your Orders</h1>
+
+	<div th:each="order : ${orders}">
+	    <p th:text="${order.id}"></p>
+	</div>
+</body>
+</html>
