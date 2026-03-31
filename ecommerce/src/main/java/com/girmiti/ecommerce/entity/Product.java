@@ -13,13 +13,7 @@ public class Product {
     private String name;
     private double price;
     private String description;
-    public String getFeedback() {
-		return feedback;
-	}
-	public void setFeedback(String feedback) {
-		this.feedback = feedback;
-	}
-	private String feedback;
+   
     
 	public String getDescription() {
 		return description;
