@@ -40,8 +40,9 @@ public class DriverController {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public void deleteByID(@PathVariable Long id) {
+	public String deleteByID(@PathVariable Long id) {
 		serv.deleteById(id);
+		return "DELETED";
 	}
 	
 	

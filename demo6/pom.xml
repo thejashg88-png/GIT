@@ -28,6 +28,9 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
+		<sonar.projectKey>demo6</sonar.projectKey>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <sonar.token>squ_be52e8a12d26ba268ff0ea481d0b08d221cf5a51</sonar.token>
 	</properties>
 	<dependencies>
 		<dependency>

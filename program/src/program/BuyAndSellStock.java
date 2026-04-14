@@ -32,7 +32,7 @@ public class BuyAndSellStock {
     // Testing the method
     public static void main(String[] args) {
         // Our standard test case
-        ArrayList<Integer> normalCase = new ArrayList<>(Arrays.asList(7, 1, 5, 3, 6, 4));
+        ArrayList<Integer> normalCase = new ArrayList<>(Arrays.asList(7, 1, 5, 6, 4, 3));
         System.out.println("Normal Case Max Profit: " + maxProfit(normalCase)); // Expected: 5
         
         // The "Trap" test case (prices only go down)
